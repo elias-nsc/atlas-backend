@@ -1,4 +1,4 @@
 class TestOrchestrator:
     @staticmethod
     def greet(name: str) -> dict:
-        return {"message": f"Olá {name} seja bem vindo!!"}
+        return {"message": f"Olá {name} seja bem vindo ao seu teste!!"}
