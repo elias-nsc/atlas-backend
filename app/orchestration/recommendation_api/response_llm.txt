@@ -1,0 +1,18 @@
+Aqui estão as opções que podem atender à demanda do usuário: \n /n
+
+**Opção 1 - /pet/{petId} - Find pet by ID**
+Retorna dados do meu pet com base no seu ID.
+
+**Opção 2 - /pet/findByStatus - Finds Pets by status**
+Retorna uma lista de pets com base nos status fornecidos. Você pode fornecer vários status separados por vírgula (,).
+
+**Opção 3 - /pet/{petId} - Find pet by ID Returns a single pet**
+Retorna dados do meu pet com base no seu ID.
+
+**Opção 4 - /user/createWithList - Find pet by ID Returns a single pet**
+Retorna dados do meu pet com base no seu ID.
+
+Essas opções devem atender à demanda do usuário de retornar dados do seu pet.
+
+
+

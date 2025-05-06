@@ -1,0 +1,353 @@
+[
+    {
+        "Modulo": "user",
+        "description_modulo": "Operations about user",
+        "Endpoints": [
+            {
+                "path": "/user/createWithList",
+                "method": "POST",
+                "description": "Creates list of users with given input array",
+                "properties": [
+                    {
+                        "parametro": "body",
+                        "description": "List of user object",
+                        "type": "array",
+                        "required": true,
+                        "example": null
+                    }
+                ],
+                "response": {}
+            },
+            {
+                "path": "/user/{username}",
+                "method": "GET",
+                "description": "Get user by user name",
+                "properties": [
+                    {
+                        "parametro": "username",
+                        "description": "The name that needs to be fetched. Use user1 for testing. ",
+                        "type": "string",
+                        "required": true,
+                        "example": null
+                    }
+                ],
+                "response": {}
+            },
+            {
+                "path": "/user/{username}",
+                "method": "PUT",
+                "description": "Updated user This can only be done by the logged in user.",
+                "properties": [
+                    {
+                        "parametro": "username",
+                        "description": "name that need to be updated",
+                        "type": "string",
+                        "required": true,
+                        "example": null
+                    },
+                    {
+                        "parametro": "body",
+                        "description": "Updated user object",
+                        "type": "string",
+                        "required": true,
+                        "example": null
+                    }
+                ],
+                "response": {}
+            },
+            {
+                "path": "/user/{username}",
+                "method": "DELETE",
+                "description": "Delete user This can only be done by the logged in user.",
+                "properties": [
+                    {
+                        "parametro": "username",
+                        "description": "The name that needs to be deleted",
+                        "type": "string",
+                        "required": true,
+                        "example": null
+                    }
+                ],
+                "response": {}
+            },
+            {
+                "path": "/user/login",
+                "method": "GET",
+                "description": "Logs user into the system",
+                "properties": [
+                    {
+                        "parametro": "username",
+                        "description": "The user name for login",
+                        "type": "string",
+                        "required": true,
+                        "example": null
+                    },
+                    {
+                        "parametro": "password",
+                        "description": "The password for login in clear text",
+                        "type": "string",
+                        "required": true,
+                        "example": null
+                    }
+                ],
+                "response": {}
+            },
+            {
+                "path": "/user/logout",
+                "method": "GET",
+                "description": "Logs out current logged in user session",
+                "properties": [],
+                "response": {}
+            },
+            {
+                "path": "/user/createWithArray",
+                "method": "POST",
+                "description": "Creates list of users with given input array",
+                "properties": [
+                    {
+                        "parametro": "body",
+                        "description": "List of user object",
+                        "type": "array",
+                        "required": true,
+                        "example": null
+                    }
+                ],
+                "response": {}
+            },
+            {
+                "path": "/user",
+                "method": "POST",
+                "description": "Create user This can only be done by the logged in user.",
+                "properties": [
+                    {
+                        "parametro": "body",
+                        "description": "Created user object",
+                        "type": "string",
+                        "required": true,
+                        "example": null
+                    }
+                ],
+                "response": {}
+            }
+        ]
+    },
+    {
+        "Modulo": "pet",
+        "description_modulo": "Everything about your Pets",
+        "Endpoints": [
+            {
+                "path": "/pet/{petId}/uploadImage",
+                "method": "POST",
+                "description": "uploads an image",
+                "properties": [
+                    {
+                        "parametro": "petId",
+                        "description": "ID of pet to update",
+                        "type": "string",
+                        "required": true,
+                        "example": null
+                    },
+                    {
+                        "parametro": "additionalMetadata",
+                        "description": "Additional data to pass to server",
+                        "type": "string",
+                        "required": false,
+                        "example": null
+                    },
+                    {
+                        "parametro": "file",
+                        "description": "file to upload",
+                        "type": "string",
+                        "required": false,
+                        "example": null
+                    }
+                ],
+                "response": {}
+            },
+            {
+                "path": "/pet",
+                "method": "POST",
+                "description": "Add a new pet to the store",
+                "properties": [
+                    {
+                        "parametro": "body",
+                        "description": "Pet object that needs to be added to the store",
+                        "type": "string",
+                        "required": true,
+                        "example": null
+                    }
+                ],
+                "response": {}
+            },
+            {
+                "path": "/pet",
+                "method": "PUT",
+                "description": "Update an existing pet",
+                "properties": [
+                    {
+                        "parametro": "body",
+                        "description": "Pet object that needs to be added to the store",
+                        "type": "string",
+                        "required": true,
+                        "example": null
+                    }
+                ],
+                "response": {}
+            },
+            {
+                "path": "/pet/findByStatus",
+                "method": "GET",
+                "description": "Finds Pets by status Multiple status values can be provided with comma separated strings",
+                "properties": [
+                    {
+                        "parametro": "status",
+                        "description": "Status values that need to be considered for filter",
+                        "type": "string",
+                        "required": true,
+                        "example": null
+                    }
+                ],
+                "response": {}
+            },
+            {
+                "path": "/pet/findByTags",
+                "method": "GET",
+                "description": "Finds Pets by tags Multiple tags can be provided with comma separated strings. Use tag1, tag2, tag3 for testing.",
+                "properties": [
+                    {
+                        "parametro": "tags",
+                        "description": "Tags to filter by",
+                        "type": "string",
+                        "required": true,
+                        "example": null
+                    }
+                ],
+                "response": {}
+            },
+            {
+                "path": "/pet/{petId}",
+                "method": "GET",
+                "description": "Find pet by ID Returns a single pet",
+                "properties": [
+                    {
+                        "parametro": "petId",
+                        "description": "ID of pet to return",
+                        "type": "string",
+                        "required": true,
+                        "example": null
+                    }
+                ],
+                "response": {}
+            },
+            {
+                "path": "/pet/{petId}",
+                "method": "POST",
+                "description": "Updates a pet in the store with form data",
+                "properties": [
+                    {
+                        "parametro": "petId",
+                        "description": "ID of pet that needs to be updated",
+                        "type": "string",
+                        "required": true,
+                        "example": null
+                    },
+                    {
+                        "parametro": "name",
+                        "description": "Updated name of the pet",
+                        "type": "string",
+                        "required": false,
+                        "example": null
+                    },
+                    {
+                        "parametro": "status",
+                        "description": "Updated status of the pet",
+                        "type": "string",
+                        "required": false,
+                        "example": null
+                    }
+                ],
+                "response": {}
+            },
+            {
+                "path": "/pet/{petId}",
+                "method": "DELETE",
+                "description": "Deletes a pet",
+                "properties": [
+                    {
+                        "parametro": "api_key",
+                        "description": "",
+                        "type": "string",
+                        "required": false,
+                        "example": null
+                    },
+                    {
+                        "parametro": "petId",
+                        "description": "Pet id to delete",
+                        "type": "string",
+                        "required": true,
+                        "example": null
+                    }
+                ],
+                "response": {}
+            }
+        ]
+    },
+    {
+        "Modulo": "store",
+        "description_modulo": "Access to Petstore orders",
+        "Endpoints": [
+            {
+                "path": "/store/inventory",
+                "method": "GET",
+                "description": "Returns pet inventories by status Returns a map of status codes to quantities",
+                "properties": [],
+                "response": {}
+            },
+            {
+                "path": "/store/order",
+                "method": "POST",
+                "description": "Place an order for a pet",
+                "properties": [
+                    {
+                        "parametro": "body",
+                        "description": "order placed for purchasing the pet",
+                        "type": "string",
+                        "required": true,
+                        "example": null
+                    }
+                ],
+                "response": {}
+            },
+            {
+                "path": "/store/order/{orderId}",
+                "method": "GET",
+                "description": "Find purchase order by ID For valid response try integer IDs with value >= 1 and <= 10. Other values will generated exceptions",
+                "properties": [
+                    {
+                        "parametro": "orderId",
+                        "description": "ID of pet that needs to be fetched",
+                        "type": "string",
+                        "required": true,
+                        "example": null
+                    }
+                ],
+                "response": {}
+            },
+            {
+                "path": "/store/order/{orderId}",
+                "method": "DELETE",
+                "description": "Delete purchase order by ID For valid response try integer IDs with positive integer value. Negative or non-integer values will generate API errors",
+                "properties": [
+                    {
+                        "parametro": "orderId",
+                        "description": "ID of the order that needs to be deleted",
+                        "type": "string",
+                        "required": true,
+                        "example": null
+                    }
+                ],
+                "response": {}
+            }
+        ]
+    }
+]
